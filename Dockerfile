@@ -1,4 +1,4 @@
 FROM alpine:latest
 COPY . /app
-CMD node /app/app.js
+CMD node /app.js
 EXPOSE 3000
