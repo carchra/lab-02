@@ -23,12 +23,12 @@ pipeline {
 
 	stage('SonarQube Analysis') {
             agent {
-                label ''
+                label 'Thing-1'
             }
             steps {
                 script {
-                    def scannerHome = tool ''
-                    withSonarQubeEnv('sonarqube') {
+                    def scannerHome = tool 'SonarQube-Scanner'
+                    withSonarQubeEnv('SonarQube-installation') {
                         sh "${scannerHome}/bin/sonar-scanner \
                             -Dsonar.projectKey=gameapp \
                             -Dsonar.sources=."
